@@ -24,9 +24,55 @@ html{
 
 .controller{
     margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.controller button {
+    margin: .5em;
 }
 
 .highlight {
     outline: black inset 4px;
     outline-offset: -4px;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50em;
+    height: 30em;
+    margin-top: 3em;
+    border: 3px black solid;
+    border-radius: 2em;
+}
+
+.topOfTable{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.centerCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 7em;
+}
+.bottomOfTable{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 7em;
+}
+
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 6em;
 }

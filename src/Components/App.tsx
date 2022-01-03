@@ -7,7 +7,8 @@ import Controller from "./Controller/Controller";
 function App() {
 
     const [selectedCards, setSelectedCards] = React.useState([]);
-    const [holeCards, setHoleCards] = React.useState([]);
+    const [holeCards, setHoleCards] = React.useState(["CK", 'DK']);
+    const [flopCards, setFlopCards] = React.useState(["CK", "DK", "HA"])
 
     return <div className="body">
         <div className="top_section">
@@ -19,10 +20,12 @@ function App() {
             selectedCards={selectedCards} 
             setHoleCards={setHoleCards}
             setSelectedCards={setSelectedCards}
+            setFlopCards={setFlopCards}
             />
         </div>
         <Table 
         holeCards={holeCards}
+        flopCards={flopCards}
         />
     </div>
 }
