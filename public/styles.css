@@ -1,6 +1,16 @@
+html{
+    background-color: rgb(226, 224, 224);
+}
+
 .body{
+    
+    margin-left: 3em;
+}
+.top_section {
     display: flex;
     flex-direction: row;
+    margin-top: 3em;
+    
 }
 
 .card {
@@ -9,6 +19,14 @@
 }
 
 .selector {
-    margin-top: 3em;
-    margin-left: 3em;
+    
+}
+
+.controller{
+    margin-left: 2em;
+}
+
+.highlight {
+    outline: black inset 4px;
+    outline-offset: -4px;
 }

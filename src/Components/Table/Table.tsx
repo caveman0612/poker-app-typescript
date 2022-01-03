@@ -1,8 +1,10 @@
 import React from "react";
-import HoleCards from "./HoleCards";
 
-export default function Table() {
+import Player from "./Player";
+
+export default function Table({holeCards}: any) {
     return <div className="table">
-        <HoleCards />
+        <Player holeCards={holeCards}/>
+        
     </div>
 }
