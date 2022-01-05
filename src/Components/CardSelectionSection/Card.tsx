@@ -1,10 +1,10 @@
 import React from "react";
 
-function Card({suit, card, setSelectedCards, selectedCards}: any) {
+function Card({suit, card, setSelectedCards, selectedCards, setCardsOnBoard, cardsOnBoard}: any) {
 
     function checkIfSelected(suit: string, card: string):string {
-        if (!selectedCards) return ""
-        if (selectedCards.includes(`${suit}${card}`)){
+        if (!cardsOnBoard) return ""
+        if (cardsOnBoard.includes(`${suit}${card}`)){
             return " highlight"
         } else return ""
     }
@@ -16,9 +16,11 @@ function Card({suit, card, setSelectedCards, selectedCards}: any) {
     onClick={()=> {
         if (selectedCards.includes(`${suit}${card}`)) {
             setSelectedCards([...selectedCards.filter((value: string) => value !== `${suit}${card}`)]);
+            setCardsOnBoard([...cardsOnBoard.filter((value: string) => value !== `${suit}${card}`)]);
         }
         else {
             setSelectedCards([...selectedCards, `${suit}${card}`])
+            setCardsOnBoard([...cardsOnBoard, `${suit}${card}`])
         }
     }}
     />

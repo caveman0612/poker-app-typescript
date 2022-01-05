@@ -15,7 +15,6 @@ html{
 
 .card {
     margin: .2em .3em;
-    width: 4em;
 }
 
 .selector {
@@ -75,4 +74,22 @@ html{
     align-items: center;
     width: 10em;
     height: 6em;
+}
+
+.upper{
+    position: relative;
+    top: 5em;
+}
+
+.lower {
+    position: relative;
+    bottom: 5em;
+}
+
+.leftPosition.lower{
+    left: .65em;
+}
+
+.rightPosition.lower{
+    right: .65em;
 }

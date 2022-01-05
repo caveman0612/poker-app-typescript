@@ -1,12 +1,21 @@
 import React from "react";
 
-export default function Controller({selectedCards, setHoleCards, setSelectedCards, setFlopCards}: any) {
+export default function Controller({
+    setCardsOnBoard, 
+    cardsOnBoard,
+    selectedCards, 
+    setHoleCards, 
+    setSelectedCards, 
+    setFlopCards, 
+    flopCards
+}: any) {
     return <div className="controller">
         <button
         onClick={() => {
             setHoleCards([])
             setSelectedCards([])
             setFlopCards([])
+            setCardsOnBoard([])
         }}
         >Reset Cards</button>
         <button onClick={() => {
@@ -23,6 +32,23 @@ export default function Controller({selectedCards, setHoleCards, setSelectedCard
             } else alert("There has to be threee cards in the flop")
         }}
         >Flop Cards</button>
+        <button onClick={() => {
+            if (flopCards.length == 3 && selectedCards.length == 1) {
+                console.log(selectedCards)
+                setFlopCards([...flopCards, ...selectedCards])
+                setSelectedCards([])
+            }
+        }}
+        >Turn Card</button>
+        <button onClick={() => {
+            if (flopCards.length == 4 && selectedCards.length == 1) {
+                console.log(selectedCards)
+                setFlopCards([...flopCards, ...selectedCards])
+                setSelectedCards([])
+            }
+        }}
+        
+        >River Card</button>
     </div>
     
 }
